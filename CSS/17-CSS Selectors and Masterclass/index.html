@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+  <style>
+    /* This is Element Selector */
+    div {
+      /* color:yellow;
+            background-color: red; */
+    }
+
+    /* This is Class Selector */
+    .red {
+      color: yellow;
+      background-color: red;
+    }
+
+    /* This is ID Selector */
+    #yellow {
+      color: red;
+      background-color: yellow;
+    }
+
+    /* This is child selectors  */
+    div>p {
+      color: blue;
+      background-color: aqua;
+    }
+
+    /* Descendant Selector */
+    div p1 {
+      color: rgb(2, 15, 26);
+      background-color: bisque;
+    }
+
+    /* Universal selector */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* PSEUDO SELECTORS */
+    a:link {
+      color: rgb(40, 160, 56);
+
+    }
+
+    a:visited {
+      color: rgb(197, 142, 53);
+
+    }
+
+    a:active {
+      background-color: red;
+    }
+
+    a:hover {
+      background-color: greenyellow;
+    }
+
+    p:first-child {
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <p>i am first child</p>
+    <p>i am second child </p>
+  </main>
+  <div class="red">THIS IS A DIV
+    <p>I am para inside div</p>
+    <article>
+      <p1>Hello broski!</p1>
+    </article>
+  </div>
+  <div id="yellow">I AM ADITYA GUPTA</div>
+  <div><a href="https://www.facebook.com">GO TO FACEBOOK </a></div>
+</body>
+
+</html>
