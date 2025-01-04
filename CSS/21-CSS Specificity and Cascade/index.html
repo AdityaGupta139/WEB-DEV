@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPECIFICITY</title>
+    <style>
+        /* Element selector SPECIFICITY=1 */
+        h1 {
+            color: aqua;
+        }
+
+        /* Class selector S=10 */
+
+        .red {
+            color: red;
+        }
+
+        /* Class selector S= 10*/
+
+        .cyellow {
+            color: yellow;
+        }
+
+        /* Class selector S=10*/
+
+        .cpurple {
+            color: purple;
+        }
+
+        /* Attribute selector S=10 */
+
+        [data-x=a] {
+            background-color: pink;
+        }
+        a.adityaclass.parth-class[href]:hover{
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="red cyellow cpurple" data-x="a">
+            We are testing CSS specificity!
+        </h1>
+    </div>
+</body>
+
+</html>
+<!-- ORDER OF SPECIFICITY -->
+<!-- INLINE STYLE > ID SELECTOR > CLASS OR ATTRIBUTE > ELEMENT SELECTOR > UNIVERSAL SELECTOR -->
+<!-- IF THE SELECTORS ARE OF SAME ORDER THEN POSITION WILL BE CONSIDERED -->
+ <!-- SABSE ZYADA !IMPORTANT KI HOTI HAI 10000 POINTS -->
