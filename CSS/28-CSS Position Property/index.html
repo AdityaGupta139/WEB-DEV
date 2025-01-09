@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PROPERTY</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid black;
+            width: 80vw;
+            height: 500px;
+            margin: 3px;
+            padding: 3px;
+
+        }
+
+        .box1 {
+            background-color: aqua;
+            position: sticky;
+            width: 100%;
+            height: 20vh;
+            top: 0px;
+        }
+
+        .box2 {
+            background-color: beige;
+            position: relative;
+
+        }
+
+        .box3 {
+            background-color: blanchedalmond;
+        }
+
+        .box4 {
+            background-color: blue;
+        }
+
+        .parent {
+            border: 2px solid blue;
+            padding: 43px;
+            margin: 34px;
+            position: absolute;
+            /* transform,filter,prespective can also make element positioned */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+
+</html>
