@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float and Clear</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        img{
+            float: left;
+        }
+        .card{
+            border: 2px solid red;
+        }
+        .card:nth-child(3){
+            clear: both;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img width="230px" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt="">
+        <div class="card">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore doloribus corrupti similique minima sequi soluta explicabo consectetur nisi suscipit esse quam illo numquam iusto non, earum enim debitis ipsam natus impedit tenetur praesentium quibusdam amet maiores commodi. Dolor, tempora earum. Pariatur facilis similique quod quo?</div>
+        <div class="card">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt sed maiores repellat sequi perspiciatis officia, necessitatibus omnis quas autem quaerat repellendus. Tempore ipsa harum accusamus cumque non repudiandae eaque temporibus incidunt, reiciendis ut autem aliquid, perspiciatis eveniet eum eius eos ab tenetur laudantium quod quidem nihil? Quia omnis quae architecto alias rem delectus suscipit, repellat, ducimus non eos illo, mollitia harum sint! Suscipit, veniam. Adipisci reiciendis, molestiae doloremque architecto deleniti natus unde. Modi cum enim, fugit accusantium totam aperiam tempora? Officiis, necessitatibus corporis quibusdam odio vero neque minima, quam enim unde provident, praesentium quasi laboriosam aliquam nulla sequi amet harum. Tempora at facere animi libero ab consequatur iusto assumenda quis delectus incidunt corrupti veniam beatae molestiae, quam error et aperiam ducimus voluptatem sequi maiores? Laborum repellendus illo ratione adipisci ea? Eveniet nam cupiditate accusantium quisquam quasi rem eos, eligendi nesciunt alias voluptatum labore quibusdam similique harum voluptas veniam, illum in pariatur omnis dolore explicabo debitis. Inventore architecto numquam tempore sit reprehenderit pariatur beatae esse debitis quidem tempora voluptatibus ea facere, laborum nobis unde, laudantium cum deserunt ratione vitae at consectetur corporis. Neque, magnam eveniet dicta id tenetur ducimus iure repellat minima aperiam rem eius quidem aut laborum a consequatur fugiat saepe aliquam dolor debitis ut unde corporis totam perferendis. Exercitationem explicabo modi veritatis praesentium ad maiores harum corporis optio delectus? Quae molestiae fugit doloremque non placeat minima quos, quas atque.</div>
+        <div class="card">CARD 3</div>
+    </div>
+</body>
+</html>
