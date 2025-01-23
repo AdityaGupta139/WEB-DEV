@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        .boxes:first-child::first-line {
+            background-color: red;
+            color: white;
+
+        }
+        .boxes{
+            border: 2px solid;
+        }
+        .box::after{
+            content: "I AM THE OG AG";
+            border: 2px solid blue;
+        }
+        .box::before{
+            content: "AG OG IS HERE";
+            border: 2px solid red;
+        }
+        ::selection{
+            background-color: black;
+            color: aqua;
+        }
+        input{
+            border: solid;
+            
+        }
+        input::placeholder{
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="boxes">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus sequi voluptatem est molestias fugit nemo sapiente rerum nobis officia minima magni esse, aliquid repudiandae numquam.</div>
+        <div class="boxes">hey i am a box</div>
+        <div class="boxes">hey i am a box</div>
+        <input type="OG GANG" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>
