@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+</head>
+<style>
+    .img1 {
+        height: 400px;
+        filter: blur(1px);
+        filter: brightness(2);
+    }
+
+    .img2 {
+        height: 300px;
+        /* filter: invert(); */
+        filter: opacity(0.5);
+    }
+
+    .img3 {
+        height: 200px;
+        filter: grayscale();
+    }
+</style>
+
+<body>
+    <div class="container">
+        <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+            alt="" class="img1">
+        <img src="https://www.masala.com/cloud/2024/10/30/Shah-Rukh-Khan-birthday.png" alt="" class="img2">
+        <img src="https://images.indianexpress.com/2024/01/Bollywood-star-Ayushmann-Khurrana-1_1600.jpg" alt=""
+            class="img3">
+    </div>
+</body>
+
+</html>
