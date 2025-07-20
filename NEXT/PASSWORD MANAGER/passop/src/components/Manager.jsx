@@ -1,8 +1,20 @@
 import React from 'react'
-import { useRef,useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 const Manager = () => {
     const ref = useRef()
-    const [form, setform] = useState({site:"",username:"",password:""})
+    const [form, setform] = useState({ site: "", username: "", password: "" })
+    const [passwordArray, setPasswordArray] = useState([])
+    useEffect(() => {
+        let passwords = localStorage.getItem("passwords");
+        if (passwords) {
+            setPasswordArray(JSON.parse(passwords))
+        }
+
+
+
+    }, [])
+
+
     const showPassword = () => {
         alert("Show Password")
         if (ref.current.src.includes("/eyenot.png")) {
@@ -11,18 +23,22 @@ const Manager = () => {
         else {
             ref.current.src = "/eyenot.png"
         }
-        
+
     }
 
-    const savePassword=() => {
-      console.log(form)
+    const savePassword = () => {
+        const newPasswordArray = [...passwordArray, form];
+        setPasswordArray([...passwordArray, form])
+        localStorage.setItem("passwords", JSON.stringify([...passwordArray, form]))
+        console.log(newPasswordArray);
     }
-    
 
-    const handleChange =(e) => {
-      setform({...form,[e.target.name]:e.target.value})
+
+    const handleChange = (e) => {
+        setform({ ...form, [e.target.name]: e.target.value })
     }
-    
+
+
 
 
     return (
@@ -65,7 +81,41 @@ const Manager = () => {
                         Add Password
                     </button>
                 </div>
+
+                <div className="passwords">
+                    <h2 className='font-bold text-2xl py-4'>Your Passwords</h2>
+                    {passwordArray.length === 0 && <div>No Passwords to Show</div>}
+                    {passwordArray.length != 0 &&
+                    <table className="table-auto w-full rounded-md overflow-hidden border solid border-[#3a9ac756] shadow-4xl">
+                        <thead className='[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#62d2ff_100%)] '>
+                            <tr>
+                                <th className='py-2'>Site</th>
+                                <th className='py-2'>Username</th>
+                                <th className='py-2'>Password</th>
+                            </tr>
+                        </thead>
+                        <tbody className='bg-black/40 backdrop-blur-3xl '>
+                            <tr>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>Malcolm Lockyer</td>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>1961</td>
+                            </tr>
+                            <tr>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>Witchy Woman</td>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>The Eagles</td>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>1972</td>
+                            </tr>
+                            <tr>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>Shining Star</td>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>Earth, Wind, and Fire</td>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>1975</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    }
+                </div>
             </div >
+
 
 
 
