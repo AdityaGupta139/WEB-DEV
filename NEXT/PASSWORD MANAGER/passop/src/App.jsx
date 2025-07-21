@@ -8,9 +8,12 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className='min-h-[81vh]'>
+      <div className='min-h-[83vh]'>
+<div className="[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#62d2ff_100%)]">
+
 
       <Manager />
+</div>
       </div>
       <Footer/>
     </>
