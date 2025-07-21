@@ -2,6 +2,7 @@ import React from 'react'
 import { useRef, useState, useEffect } from 'react'
 const Manager = () => {
     const ref = useRef()
+    const passwordRef=useRef()
     const [form, setform] = useState({ site: "", username: "", password: "" })
     const [passwordArray, setPasswordArray] = useState([])
     useEffect(() => {
@@ -16,12 +17,14 @@ const Manager = () => {
 
 
     const showPassword = () => {
-        alert("Show Password")
+        passwordRef.current.type="text"
         if (ref.current.src.includes("/eyenot.png")) {
             ref.current.src = "/eye.png"
+            passwordRef.current.type="password"
         }
         else {
             ref.current.src = "/eyenot.png"
+            passwordRef.current.type="text"
         }
 
     }
@@ -64,7 +67,7 @@ const Manager = () => {
                         <input value={form.username} onChange={handleChange} className=' border solid border-[#deeff7] bg-[#d7ebf5]  w-full p-4 py-1 rounded-xl' type="text" name='username' placeholder='Enter Username' />
                         <div className="relative">
 
-                            <input value={form.password} onChange={handleChange} className=' border solid border-[#3a9bc7] bg-[#d7ebf5]  w-full p-4 py-1 rounded-xl' type="text" name='password' placeholder=' Enter Password' />
+                            <input ref={passwordRef} value={form.password} onChange={handleChange} className=' border solid border-[#3a9bc7] bg-[#d7ebf5]  w-full p-4 py-1 rounded-xl' type="password" name='password' placeholder=' Enter Password' />
                             <span className="absolute right-[1px] top-[3px] hover:cursor-pointer" onClick={showPassword}>
                                 <img ref={ref} className='p-1 ' width={30} src="/eye.png" alt="" />
                             </span>
@@ -95,21 +98,14 @@ const Manager = () => {
                             </tr>
                         </thead>
                         <tbody className='bg-black/40 backdrop-blur-3xl '>
-                            <tr>
-                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>Malcolm Lockyer</td>
-                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>1961</td>
+                        {passwordArray.map((item,index)=>{
+                        return <tr key={index}>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'><a href={item.site} target='_blank'>{item.site}</a></td>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>{item.username}</td>
+                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>{item.password}</td>
                             </tr>
-                            <tr>
-                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>Witchy Woman</td>
-                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>The Eagles</td>
-                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>1972</td>
-                            </tr>
-                            <tr>
-                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>Shining Star</td>
-                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>Earth, Wind, and Fire</td>
-                                <td className='text-center w-32 py-2 border solid border-[#3a9ac756] shadow-4xl'>1975</td>
-                            </tr>
+                            
+                        })}
                         </tbody>
                     </table>
                     }
