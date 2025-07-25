@@ -1,15 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -19,11 +12,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={inter.className}>
+
+        <Navbar/>
+        <div className="min-h-[84.5vh] relative h-full w-full bg-slate-950 before:absolute before:top-[-10%] before:bottom-0 before:left-[-20%] before:h-[500px] before:w-[500px] before:rounded-full before:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] after:absolute after:top-[-10%] after:bottom-0 after:right-[-20%] after:h-[500px] after:w-[500px] after:rounded-full after:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] ">
+          
+          <div class="
+          relative h-full w-full bg-slate-950 before:absolute before:top-[-10%] before:bottom-0 before:left-[-20%] before:h-[500px] before:w-[500px] before:rounded-full before:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] after:absolute after:top-[-10%] after:bottom-0 after:right-[-20%] after:h-[500px] after:w-[500px] after:rounded-full after:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))]"></div>
+
         {children}
-      </body>
+        </div>
+        <Footer/>
+        
+        </body>
     </html>
   );
 }
