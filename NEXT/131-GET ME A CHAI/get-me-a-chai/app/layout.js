@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SessionWrapper from "@/components/SessionWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -13,18 +14,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <SessionWrapper>
 
-        <Navbar/>
-        <div className="min-h-[84.5vh] relative h-full w-full bg-slate-950 before:absolute before:top-[-10%] before:bottom-0 before:left-[-20%] before:h-[500px] before:w-[500px] before:rounded-full before:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] after:absolute after:top-[-10%] after:bottom-0 after:right-[-20%] after:h-[500px] after:w-[500px] after:rounded-full after:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] ">
-          
-          <div class="
-          relative h-full w-full bg-slate-950 before:absolute before:top-[-10%] before:bottom-0 before:left-[-20%] before:h-[500px] before:w-[500px] before:rounded-full before:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] after:absolute after:top-[-10%] after:bottom-0 after:right-[-20%] after:h-[500px] after:w-[500px] after:rounded-full after:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))]"></div>
+          <Navbar/>
+          <div className="min-h-[84.5vh] relative h-full w-full bg-slate-950 before:absolute before:top-[-10%] before:bottom-0 before:left-[-20%] before:h-[500px] before:w-[500px] before:rounded-full before:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] after:absolute after:top-[-10%] after:bottom-0 after:right-[-20%] after:h-[500px] after:w-[500px] after:rounded-full after:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] text-white">
 
-        {children}
-        </div>
-        <Footer/>
-        
-        </body>
+            {/* <div className="
+          relative h-full w-full bg-slate-950 before:absolute before:top-[-10%] before:bottom-0 before:left-[-20%] before:h-[500px] before:w-[500px] before:rounded-full before:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] after:absolute after:top-[-10%] after:bottom-0 after:right-[-20%] after:h-[500px] after:w-[500px] after:rounded-full after:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] text-white"></div> */}
+
+            {children}
+          </div>
+          <Footer />
+        </SessionWrapper>
+
+      </body>
     </html>
   );
 }
