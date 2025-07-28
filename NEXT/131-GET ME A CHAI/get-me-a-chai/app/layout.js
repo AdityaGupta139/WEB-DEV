@@ -17,11 +17,7 @@ export default function RootLayout({ children }) {
         <SessionWrapper>
 
           <Navbar/>
-          <div className="min-h-[84.5vh] relative h-full w-full bg-slate-950 before:absolute before:top-[-10%] before:bottom-0 before:left-[-20%] before:h-[500px] before:w-[500px] before:rounded-full before:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] after:absolute after:top-[-10%] after:bottom-0 after:right-[-20%] after:h-[500px] after:w-[500px] after:rounded-full after:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] text-white">
-
-            {/* <div className="
-          relative h-full w-full bg-slate-950 before:absolute before:top-[-10%] before:bottom-0 before:left-[-20%] before:h-[500px] before:w-[500px] before:rounded-full before:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] after:absolute after:top-[-10%] after:bottom-0 after:right-[-20%] after:h-[500px] after:w-[500px] after:rounded-full after:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] text-white"></div> */}
-
+          <div className="min-h-screen overflow-hidden relative h-full w-full bg-slate-950 before:absolute before:top-[-10%] before:bottom-0 before:left-[-20%] before:h-[500px] before:w-[500px] before:rounded-full before:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] after:absolute after:top-[-10%] after:bottom-0 after:right-[-20%] after:h-[500px] after:w-[500px] after:rounded-full after:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,0.15),rgba(255,255,255,0))] text-white">
             {children}
           </div>
           <Footer />
@@ -31,3 +27,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+// [84.5vh]

@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col items-center justify-center h-[44vh] gap-4  text-white">
-        <div className="font-bold text-5xl flex justify-center items-center gap-2">Buy Me a Chai <span><img width={88} src="/tea.gif" alt="" /></span></div>
+        <div className="font-bold text-5xl flex justify-center items-center gap-2">Buy Me a Chai <span><img className="invertImg" width={88} src="/tea.gif" alt="" /></span></div>
         <p>Crowd funding for your favorite chai</p>
         <div>
           <button type="button" className="text-pink-500 bg-slate-900 border border-pink-500 backdrop-blur-3xl hover:text-white hover:bg-gradient-to-br hover:from-pink-600 hover:to-fuchsia-500 hover:shadow-lg hover:shadow-pink-500/30 focus:ring-2 focus:ring-pink-500/30 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all duration-200">
