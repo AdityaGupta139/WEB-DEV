@@ -223,7 +223,7 @@ const PaymentPage = ({ username }) => {
       key: currentUser.razorpayid,
       amount,
       currency: "INR",
-      name: "Get Me A Chai",
+      name: "ChaiChain",
       description: "Test Transaction",
       image: "https://example.com/your_logo",
       order_id: orderId,
